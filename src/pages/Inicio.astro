@@ -1,0 +1,239 @@
+---
+
+---
+
+<section>
+    <header>
+        <a href="#" class="logo">AQUAWORKS</a>
+        <div class="toggle" onclick="menuToggle()"></div>
+    </header>
+    <div class="glass"></div>
+    <div class="content">
+<h2> AQUAWORKS S.R.L. <br><br><span>Soluciones en Agua, Mineria e Industria</span></h2>
+    </div>
+    <video src="../../public/video2.mp4" autoplay loop muted class="video"
+    ></video>
+    <ul class="navigation">
+        <li style="--i:1"><a href="#">Inicio</a></li>
+        <li style="--i:2"><a href="#">Nosotros</a></li>
+        <li style="--i:3"><a href="#">Productos</a></li>
+        <li style="--i:4"><a href="#">Servicios</a></li>
+        <li style="--i:5"><a href="#">Contactos</a></li>
+
+    </ul>
+</section>
+<script type="text/javascript">
+    function menuToggle() {
+        const toggleMenu = document.querySelector(".toggle");
+        const section = document.querySelector("section");
+        toggleMenu.classList.toggle("active");
+        section.classList.toggle("active");
+    }
+</script>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    /* Suggested code may be subject to a license. Learn more: ~LicenseLog:1008935490. */
+    section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    section video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    header .logo {
+        position: relative;
+        font-size: 2em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+    }
+    header .toggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url("../../public/menu.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .toggle.active {
+        background: url("../../public/close.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+    }
+
+    header .toggle:before {
+        content: "Menu";
+        position: absolute;
+        top: 8.5px;
+        right: 50px;
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: 2px;
+        font-size: 14px;
+        padding: 2px 5px;
+        background: #fff;
+        color: #111;
+    }
+    header .toggle.active:before {
+        content: "Close";
+    }
+
+    .glass {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        z-index: 1;
+        backdrop-filter: blur(15px);
+        box-shadow: 10px 0 15px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        transition-delay: 1s;
+    }
+
+    section.active .glass {
+        width: 100%;
+        backdrop-filter: blur(20px);
+        transition-delay: 0s;
+    }
+
+    section .content {
+        position: relative;
+        text-align: center;
+        z-index: 10;
+        transition: 0.5s;
+        transition-delay: 1s;
+    }
+    
+    section.active .content {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-200px);
+        transition-delay: 0s;
+    }
+
+    section .content h2 {
+        position: relative;
+        color: #fff;
+        font-size: 8vw;
+        line-height: 0.55em;
+        text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+    section .content h2 span {
+        font-size: 0.2em;
+        font-weight: 300;
+        letter-spacing: 5px;
+        background: #fff;
+        color: #111;
+        padding: 0 10px;
+        text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+    }
+    section .navigation {
+/* Suggested code may be subject to a license. Learn more: ~LicenseLog:3700825174. */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    section .navigation li {
+        list-style: none;
+        text-align: center;
+        margin: 15px 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        transform: translateX(200px);
+    }
+
+    section.active .navigation li {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: calc(0.1s * var(--i));
+        transform: translateX(0px);
+    }
+
+    section .navigation li a {
+        color: #111;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        background: #fff;
+        padding: 4px 10px;
+        display: inline-block;
+    }
+    section .navigation li a:hover {
+        background: #007BFF;
+        color: #fff;
+        letter-spacing: 10px;
+        transition: 0.5s;
+        text-transform: lowercase;
+    }
+
+    @media (max-width: 991px) {
+        header {
+            padding: 20px;
+        }
+        header .logo {
+            font-size: 1em;
+        }
+        section .content h2 {
+            font-size: 8vw;
+        }
+        section .content h2 span {
+            font-size: 0.4em;
+            letter-spacing: 2px;
+            padding: 0 5px;
+        }
+        section .navigation li a {
+            font-size: 1em;
+        }
+        .glass {
+            width: 50%;
+        }
+    }
+   
+</style>
