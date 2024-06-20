@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Welcome to Aquaworks S.R.L. page
 
 ```sh
 npm create astro@latest -- --template basics
