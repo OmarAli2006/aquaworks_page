@@ -10,7 +10,7 @@ npm create astro@latest -- --template basics
 
 > This is the repository of the Aquaworks S.R.L. website, developed with Astro, made for Omar Chanel Ali Fuertes.
 
-![just-the-basics]('/public/home.jpg')
+![imagen del inicio de la pagina](/assets/home.jpg)
 
 ## 🚀 Project Structure
 
