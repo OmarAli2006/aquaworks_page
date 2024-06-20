@@ -1,1 +1,62 @@
-<h1>Nosotros</h1>
+<section>
+    <div class="content">
+        <h2>
+            Quienes Somos
+        </h2>
+        <p>
+            Somos una empresa líder en la venta de tuberías HDPE, equipos de
+            termofusión, fabricacion de accesorios segmentarios, Accesorios en Fierro Fundido Dúctil y Acero
+            sercicios de termofusion y electrofusion de tuberias,, ademas
+            ofrecemos consultoría en la elaboracion y ejecución de
+            proyectos de riego, micro riego, instalaciones mineras e industriales de agua. Con años de experiencia en el sector,
+            proporcionamos soluciones innovadoras y sostenibles para satisfacer
+            las necesidades de nuestros clientes.
+        </p>
+    </div>
+</section>
+<style>
+        @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 20px;
+        text-align: center;
+        background: #007BFF;
+    }
+    h2 {
+        color: #fff;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    p {
+        color: #fff;
+        font-size: 2em;
+        line-height: 1.5;
+        margin-bottom: 40px;
+        font-family: "Nanum Gothic", sans-serif;
+    }
+    .toggle {
+        display: none;
+    }
+    .navigation {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+    }
+    @media (max-width: 768px) {
+        .toggle {
+            display: block;
+        }
+        p {
+            font-size: 1.2em;
+        }
+    }
+</style>
